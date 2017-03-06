@@ -1,0 +1,26 @@
+https://www.codetutorial.io/loopback-and-angularjs-first-tutorial/
+
+create new model to existing project command : "slc loopback:model" after this run command lb-ng server/server.js client/js/lb-services.js
+for angular support
+
+methods: https://loopback.io/doc/en/lb2/AngularJS-JavaScript-SDK.html
+
+if u want to change model that is already created edit common/models/model_name.json file in root directory of application
+
+AWS:
+login : deepak.r.poojari@gmail.com 
+chmod 600 loopbackexample1.pem
+deepak@deepak-VPCEH25EN:~/Desktop$ ssh -i loopbackexample1.pem ubuntu@ec2-35-154-155-206.ap-south-1.compute.amazonaws.com
+nodejs installation : wget "link"  (get link from nodejs downloads)
+Extract the files using : tar -xvf node-v6.10.0.tar.gz
+goto node-v6.10.0
+
+sudo apt-get install python-software-properties python g++ make
+execute this command in node-v6.10.0 directory  ./configure && make && sudo make install
+
+follow this for loopback https://www.codetutorial.io/loopback-and-angularjs-first-tutorial/
+	
+
+
+ 
+

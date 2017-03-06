@@ -1,0 +1,91 @@
+    <div class="container">   
+        <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" ng-show="loginshow" > 
+            <div class="panel panel-info" >
+                <div class="panel-heading">
+                    <div class="panel-title">Sign In</div>
+                </div>     
+                    <div style="padding-top:30px" class="panel-body" >
+                        <!-- login alert -->
+                        <div ng-show="alertshow" id="login-alert" class="alert alert-danger col-sm-12">
+                            <p> Email & Password combination is not correct</p>
+                        </div> 
+                        <!-- end login alert -->
+                        <form id="loginform" class="form-horizontal" role="form" name="loginform">    
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" class="form-control" name="email" placeholder="Email Address" ng-model="scopedata.email" required>
+                            </div>  
+                            <div class="input-group" style="margin-top:10px">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="login-password" type="password" class="form-control" name="password" placeholder="password" ng-model="scopedata.password" required>
+                            </div>   
+                            <div style="margin-top:10px" class="form-group">
+                                <!-- Button -->
+                                <div class="col-sm-12 ">
+                                  <a id="btn-login" class="btn btn-success" ng-click="loginaccount(scopedata.email,scopedata.password)" ng-disabled="loginform.password.$dirty && loginform.password.$invalid || loginform.username.$dirty && loginform.username.$invalid">Login  </a>
+                                </div>
+                            </div>
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Don't have an account! 
+                                        <a ng-click="loginshow=false">
+                                            Sign Up Here
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>    
+                        </div>                     
+                </div>  
+        </div>
+        <div id="signupbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" ng-show='!loginshow' >
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px">
+                            <a id="signinlink" ng-click="loginshow=true">Sign In</a>
+                            </div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form"> 
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="email" placeholder="Email Address" ng-model="scopedata.email" required>
+                                    </div>
+                                </div>  
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">First Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="firstname" placeholder="First Name" ng-model="scopedata.firstName">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastname" placeholder="Last Name" ng-model="scopedata.lastame">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Password" ng-model="scopedata.password" required="">
+                                    </div>
+                                </div>   
+                                <div class="form-group">
+                                    <!-- Button -->                         
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button ng-click="signup(scopedata)" id="btn-signup" type="button" class="btn btn-info" ><i class="icon-hand-right"></i> Sign Up</button>
+                                        <span style="margin-left:8px;"></span>  
+                                    </div>
+                                </div>
+                                <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">    
+                                </div> 
+                            </form>
+                         </div>
+                    </div>
+         </div>  
+    </div>  
+
+   

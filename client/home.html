@@ -1,0 +1,48 @@
+<section>    
+<div class="container">
+<form style="display: inline-block;vertical-align: top">    
+    <div class="input-group">
+      <input type="text" class="form-control"  placeholder="Search Existing Categories" ng-model="text">
+    </div>     
+</form>
+<div id="menu" >
+  <div class="panel list-group col-md-5">
+      <div ng-repeat="cat in cats|filter : {'patent':'menu'}|filter:text |filter : {'email':email}:true">
+          <a class="list-group-item" ng-mouseover="showsubcat()" ng-init="initsubcat()">{{cat.name}}{{cat}}
+            <button class="btn btn-info btn-xs glyphicon glyphicon-plus-sign" ng-show="showedit" ng-click="addsubcategory()" align="right" class=" list-item">
+            </button>
+          </a>
+          <div id="sm" ng-show="subcat" ng-repeat="cat in cats|filter : {'patent' : cat.name}|filter : {'email':email}:true">
+            <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span>{{cat.name}}{{cat}}</a>
+          </div>
+      </div> 
+      <button class="btn btn-info" ng-click="showedit=!showedit">Edit Category</button>
+      <button class="btn btn-info" ng-click="showaddnewcat=!showaddnewcat">Add New Category</button>  
+      <form ng-show="showaddcat">
+      <h3>Add Subcategory for {{parentCat}}</h3>
+       <div class="input-group">
+          <input type="text" class="form-control"  placeholder="Subcategory Name" ng-model="subCat">
+          <div class="input-group-btn">
+            <button class="btn btn-info" type="submit" ng-click="addsubcat(subCat)">
+              <i>Submit</i>
+            </button>
+            </a>
+          </div>
+       </div> 
+      </form>
+      <form ng-show="showaddnewcat">
+      <h3>Add New Category</h3>
+       <div class="input-group">
+          <input type="text" class="form-control"  placeholder="Category Name" ng-model="newCat">
+          <div class="input-group-btn">
+            <button class="btn btn-info" type="submit" ng-click="addnewcat(newCat)">
+              <i>Submit</i>
+            </button>
+            </a>
+          </div>
+       </div> 
+      </form>  
+  </div>
+</div> 
+</div>
+</section>

@@ -1,0 +1,136 @@
+<!--Start of slide-->
+<section>
+  <div ng-controller="MainCtrl" ng-init="in0='true'">
+    <div align="center">
+      <div class="cont">
+        <a href="http://www.jabong.com/" target="_blank"><img ng-show="in0" class=" imgcont img-responsive" align="center" style="cursor: pointer;" src="./Jabong.jpg" ></a>
+        <a href="http://fkrt.it/kgQXqTuuuN" target="_blank"><img ng-show="in1" class=" imgcont img-responsive" align="center" style="cursor: pointer;" src="./Flipkart.jpg"></a>
+        <a href="http://www.myntra.com/" target="_blank"><img ng-show="in2" class=" imgcont img-responsive" align="center" style="cursor: pointer;" src="./Myntra.jpg"></a>
+        <a href="www.shopclues.com" target="_blank"><img ng-show="in3" class=" imgcont img-responsive" align="center" style="cursor: pointer;" src="./shopclues.jpg"></a>
+        <a href="http://amzn.to/2jpuL0" target="_blank"><img ng-show="in4" class=" imgcont img-responsive" align="center" style="cursor: pointer;" src="./Amazon.jpg"></a>
+          <div class="slidecont" style="background-color: #272e3a;padding-bottom: 1%;padding-top : 1% ;cursor: pointer;">
+            <div class="slidecont1" ng-mouseover="index=0;indexcheck()" ><a href="http://www.jabong.com/" target="_blank"><span>Jabong Fashion Sale India</span></a></div>
+            <div class="slidecont1" ng-mouseover="index=1;indexcheck()" ><a href="http://fkrt.it/kgQXqTuuuN" target="_blank"><span>Flipkart Pre Public Sale</span></a></div>
+            <div class="slidecont1" ng-mouseover="index=2;indexcheck()" ><a href="http://www.myntra.com/" target="_blank"><span>Myntra Fashion Sale India</span></a></div>
+            <div class="slidecont1" ng-mouseover="index=3;indexcheck()" ><a href="www.shopclues.com" target="_blank"><span>Shopclues India's biggest Sale</span></a></div>
+            <div class="slidecont1" ng-mouseover="index=4;indexcheck()" ><a href="http://amzn.to/2jpuL0" target="_blank"><span>Amazon Great Indian Sale</span></a></div>
+          </div>
+      </div>
+    </div> 
+  </div>
+</section>
+<!--end of slide-->
+<!--Start of todays best offers-->  
+<section  ng-controller="MainCtrl" style="background-color: white; margin-top: 2.5%;margin-left:2.5%" class="offercont" ng-init="todayoffers();x=0" >
+  <h2 style="font-weight:500;margin-left:2vw" class="heading"> TODAY &#39S BEST OFFERS & COUPONS
+  </h2>
+    <div ng-repeat="offer in offers" style="display: inline-block;" ng-init="rannum=[1234,134,1452,187,567,789,984,2100,436,789,9982]">
+      <div class="container-fluid" align="center">	
+      	<div class="row" class="container-fluid ">
+      		<div class="col-sm-2   bestoffer ">
+            <div class="bestofferbox">
+              <img href="{{offer.url}}" target="_blank" src="{{offer.client}}-logo.jpg" class="offerlogo" style="cursor:pointer;">
+              <div class="noofusers">{{rannum[$index]}} Uses Today
+              </div>
+              <a href="{{offer.url}}" target="_blank">
+      	        <div class="bestofferdesc" >
+      	         {{offer.title}}
+      	        </div>
+              </a>	
+              <a href="{{offer.url}}" target="_blank">
+                <div class="offerseeall">See all 42 {{offer.client}} Offers 
+                </div>
+              </a>
+    		    </div>
+      		</div>
+  	    </div>
+      </div>
+    </div>
+</section>
+<!--end todays offers-->
+<!--start of popular stories-->
+<section style="display: block;width:90%;margin-left:3% " >
+  <div class="heading" style="font-size:190%;margin-bottom:2%"> POPULAR STORIES
+  </div>
+  <div class="content-wrapper" >
+    <div>
+      <a class="pop-stories" href="offers" ng-click="callcli('Flipkart')">
+         <div class="pop-store-box">
+             <img class="top-store-logo" src="./Flipkart-logo.jpg">
+             <div class="top-store-tag">10 offers 
+             </div>
+         </div>
+        
+      </a>
+      <a class="pop-stories" href="offers" ng-click="callcli('Amazon')">
+         <div class="pop-store-box">
+             <img class="top-store-logo" src="./Amazon-logo.jpg">
+             <div class="top-store-tag"> 15 offers </div>
+         </div>
+        
+      </a>
+      <a class="pop-stories" href="offers" ng-click="callcli('Jabong')">
+         <div class="pop-store-box">
+             <img class="top-store-logo" src="./Jabong-logo.jpg">
+             <div class="top-store-tag"> 25 offers </div>
+         </div>
+        
+      </a>
+      <a class="pop-stories" href="offers" ng-click="callcli('Snapdeal')">
+         <div class="pop-store-box">
+             <img class="top-store-logo" src="./Snapdeal-logo.jpg">
+             <div class="top-store-tag"> 16 offers </div>
+         </div>
+        
+      </a>
+      <a class="pop-stories" href="offers" ng-click="callcli('Freecharge')">
+         <div class="pop-store-box">
+             <img class="top-store-logo" src="./Freecharge-logo.jpg">
+             <div class="top-store-tag"> 10 offers </div>
+         </div>
+        
+      </a>
+      <a class="pop-stories" href="offers" ng-click="callcli('Myntra')">
+         <div class="pop-store-box">
+             <img class="top-store-logo" src="./Myntra-logo.jpg">
+             <div class="top-store-tag"> 15 offers </div>
+         </div>
+        
+      </a>
+      <a class="pop-stories" href="offers" ng-click="callcli('Redbus')">
+         <div class="pop-store-box">
+             <img class="top-store-logo" src="./Redbus-logo.jpg">
+             <div class="top-store-tag"> 10 offers </div>
+         </div>
+        
+      </a>
+      <a class="pop-stories" href="offers" ng-click="callcli('Makemytrip')">
+         <div class="pop-store-box">
+             <img class="top-store-logo" src="./Makemytrip-logo.jpg">
+             <div class="top-store-tag"> 8 offers </div>
+         </div>
+        
+      </a>
+      <a class="pop-stories" href="offers" ng-click="callcli('Paytm')">
+         <div class="pop-store-box">
+             <img class="top-store-logo" src="./Paytm-logo.jpg">
+             <div class="top-store-tag"> 12 offers </div>
+         </div>
+        
+      </a>
+      <a class="pop-stories" href="offers" ng-click="callcli('Ebay')">
+         <div class="pop-store-box">
+             <img class="top-store-logo" src="./Ebay-logo.jpg">
+             <div class="top-store-tag"> 16 offers </div>
+         </div>
+        
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!--end of popular stories-->
+    <div class="panel-body">
+    </div>    
+</div>
