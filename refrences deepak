@@ -19,6 +19,9 @@ sudo apt-get install python-software-properties python g++ make
 execute this command in node-v6.10.0 directory  ./configure && make && sudo make install
 
 follow this for loopback https://www.codetutorial.io/loopback-and-angularjs-first-tutorial/
+
+
+using git 
 	
 
 

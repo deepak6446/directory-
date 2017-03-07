@@ -17,9 +17,32 @@ app.start = function() {
     }
   });
 };
+/*app.get('/', function(req, res){ 
+    res.sendFile('/home/ubuntu/loopback/directory/directory-/client/index.html');
+});*/
 app.get('/', function(req, res){  
+  console.log("in /");
   res.sendFile('/home/deepak/Desktop/loopbackex/directory/client/index.html');
-})
+});
+/*app.get('/*', function(req, res){  
+  console.log(req.url);
+  var link=req.url;
+  console.log(link.substring(1,4));
+  if(link.substring(1,4)=='lib'){
+    console.log('/home/deepak/Desktop/loopbackex/directory/client'+req.url)
+    res.sendFile('/home/deepak/Desktop/loopbackex/directory/client'+req.url);
+    app.use(express.static('/home/deepak/Desktop/loopbackex/directory/client'))
+  }
+  else if(link.substring(1,3)=='js'){
+    console.log('/home/deepak/Desktop/loopbackex/directory/client'+req.url)
+    //res.sendFile('/home/deepak/Desktop/loopbackex/directory/client'+req.url);
+    app.use(express.static('/home/deepak/Desktop/loopbackex/directory/client'))
+
+
+  }
+  console.log("in /*");
+  res.send("Hello");
+})*/
 /*app.use(function(req, res) {
     res.sendfile('/home/deepak/Desktop/loopbackex/directory/client/index.html');
 });*/
