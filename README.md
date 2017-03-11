@@ -1,7 +1,9 @@
 #What is it ?
 
 This is a demo application demonstrating the use of loopback.io and angularjs.
-The Loopback API server is built on top of the Express web server which is well known in the Node.js community
+The Loopback API server is built on top of the Express web server which is well known in the Node.js community.
+
+##live Demo :http://ec2-35-154-155-206.ap-south-1.compute.amazonaws.com:3000/
 
 #What does it do?
 1. Allows the user to Login and signup.
