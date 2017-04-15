@@ -1,16 +1,16 @@
-#What is it ?
+# What is it ?
 
 This is a demo application demonstrating the use of loopback.io and angularjs.
 The Loopback API server is built on top of the Express web server which is well known in the Node.js community.
 
-##live Demo :http://ec2-35-154-155-206.ap-south-1.compute.amazonaws.com:3000/
+## live Demo :http://ec2-35-154-155-206.ap-south-1.compute.amazonaws.com:3000/
 
-#What does it do?
+# What does it do?
 1. Allows the user to Login and signup.
 2. logged-in user can create a category, Editing and deleting a category is also possible.
 3. users can search for existing categories .  
 
-#How to run this?
+# How to run this?
 1.  Download node. For a step by step process see this.
 2. make a directory where you will clone this project.
 3. move into that folder and type git clone https://github.com/deepak6446/directory-.git
@@ -22,9 +22,9 @@ This will print and output like ,
 Web server listening at: http://0.0.0.0:3000
 Browse your REST API at http://0.0.0.0:3000/explorer
 
-##Now our application is running and you can access it by typing http://localhost:3000 in browser.
+## Now our application is running and you can access it by typing http://localhost:3000 in browser.
 
-##Here is the list of category and their Sub-category types: 
+## Here is the list of category and their Sub-category types: 
 1. Electronics 
     * Tv
     * AC
