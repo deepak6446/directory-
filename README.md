@@ -11,7 +11,7 @@ The Loopback API server is built on top of the Express web server which is well 
 3. users can search for existing categories .  
 
 # How to run this?
-1.  Download node. For a step by step process see this.
+1.  Download and install nodejs.
 2. make a directory where you will clone this project.
 3. move into that folder and type git clone https://github.com/deepak6446/directory-.git
 4. cd directory-/
